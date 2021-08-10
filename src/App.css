@@ -1,0 +1,41 @@
+.submit {
+  justify-content: center;
+  align-content: center;
+  margin: 5rem auto;
+
+}
+
+.log {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: -1rem;
+  margin-left: auto;
+  margin-right: auto;
+  border: 0px solid black;
+  width: 300px;
+  background-color: rgb(190, 217, 243);
+  padding: 0.5rem;
+}
+
+.btn {
+  margin: 1rem auto;
+}
+
+
+.articles{
+  width: 25rem;
+  height: 24rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.text {
+  color:black;
+}
+
+.card-image {
+  width: 100%;
+  height:14vw;
+  object-fit: cover;
+  
+}
