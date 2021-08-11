@@ -2,7 +2,7 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import { Container, Row, Col, Card, CardGroup, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import API_URLS from '../../apiConfigs';
+// import API_URLS from '../../apiConfigs';
 
 const News = ({ loggedIn }) => {
   const [news, setNews] = useState([]);
@@ -10,7 +10,7 @@ const News = ({ loggedIn }) => {
   
   const getNewsIndex = async () => {
     try {
-      const response = await fetch(API_URLS + 'news/' );
+      const response = await fetch('https://pure-lowlands-16957.herokuapp.com/news' );
       const data = await response.json();
       console.log(data);
       setNews(data);

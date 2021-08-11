@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { Container, Image, Row, Col, CardGroup, Button } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
 import { Link, Route } from 'react-router-dom';
-import API_URL from '../../apiConfig';
+// import API_URL from '../../apiConfig';
 
 
 
@@ -13,7 +13,7 @@ const Home = () => {
 
   const getHomeIndex = async () => {
     try {
-      const response = await fetch(API_URL);
+      const response = await fetch('https://newsapi.org/v2/top-headlines?page=20category=technology&country=us&apiKey=a4c0f6406eb744eeb7e00beb7feb9d54');
       const data = await response.json();
       console.log(data);
       setHome(data.articles)
