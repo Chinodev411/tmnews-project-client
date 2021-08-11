@@ -9,13 +9,13 @@ const News = ({ loggedIn }) => {
   const [comments, setComments] = useState([]);
   
   const getNewsIndex = async () => {
+    const url = "https://pure-lowlands-16957.herokuapp.com/news";
     try {
-      const response = await fetch('https://pure-lowlands-16957.herokuapp.com/news' );
+      const response = await fetch(url);
       const data = await response.json();
-      console.log(data);
       setNews(data);
-    } catch(error) {
-      console.log(error);
+    } catch(err) {
+      console.log(err);
     };
   };
 

@@ -12,13 +12,13 @@ const Home = () => {
   const [articles, setArticles] = useState([]);
 
   const getHomeIndex = async () => {
+    const url = "https://newsapi.org/v2/top-headlines?page=20category=technology&country=us&apiKey=a4c0f6406eb744eeb7e00beb7feb9d54"
     try {
-      const response = await fetch('https://newsapi.org/v2/top-headlines?page=20category=technology&country=us&apiKey=a4c0f6406eb744eeb7e00beb7feb9d54');
+      const response = await fetch(url);
       const data = await response.json();
-      console.log(data);
       setHome(data.articles)
-    } catch (error) {
-      console.log(error);
+    } catch (err) {
+      console.log(err);
     };
   };
 
