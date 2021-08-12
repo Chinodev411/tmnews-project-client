@@ -1,3 +1,7 @@
+.nav {
+  background-color: rgb(228, 213, 241);
+}
+
 .submit {
   justify-content: center;
   align-content: center;
@@ -26,7 +30,7 @@
   width: 25rem;
   height: 24rem;
   margin-bottom: 1rem;
-  margin-top: 1rem;
+  margin-top: 3rem;
 }
 
 .text {
@@ -38,4 +42,12 @@
   height:14vw;
   object-fit: cover;
   
+}
+
+.background {
+  background:repeating-linear-gradient(rgb(245, 233, 209), rgb(111, 231, 247));
+}
+
+.one {
+  background-color: rgb(247, 239, 227);
 }

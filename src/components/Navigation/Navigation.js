@@ -4,7 +4,7 @@ import { LinkContainer } from 'react-router-bootstrap';
 
 const Navigation = ({ loggedIn, handleLogout, userInfo }) => {
   return (
-    <Navbar bg='light' expand='lg' collapseOnSelect={true}>
+    <Navbar expand='lg' collapseOnSelect={true} className='nav'>
       <Container>
         <LinkContainer to='/'>
           <Navbar.Brand>TechMount News</Navbar.Brand>

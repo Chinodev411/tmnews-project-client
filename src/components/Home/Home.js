@@ -31,7 +31,7 @@ const Home = () => {
   // }
   
   return (
-    <Container>
+    <Container className='background'>
       <CardGroup>
         <Row>
           {home.map((home) => {
@@ -42,7 +42,7 @@ const Home = () => {
                   style={{ color: 'black',
                   textDecoration: 'none'}}>
                   <Card className='articles'>
-                    <Card.Body>
+                    <Card.Body className='one'>
                       <Card.Title className='text'>
                         {home.title}
                       </Card.Title>
