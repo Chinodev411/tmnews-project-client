@@ -48,10 +48,10 @@ const Home = () => {
                       </Card.Title>
                       <Card.Text>{home.byline}</Card.Text>
                       <Card.Text>{home.abstract}</Card.Text>
-                      {/* <Card.Img variant="top" 
+                      <Card.Img variant="top" 
                       rounded 
                       fluid
-                      src={home.uri} alt="Card image" className="card-image"/> */}
+                      src={home.multimedia[0].url} alt="Card image" className="card-image"/>
                       <Card.Text>{home.published_date}</Card.Text>
                       
                     </Card.Body>
