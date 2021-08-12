@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { Container, Image, Row, Col, CardGroup, Button } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
 import { Link, Route } from 'react-router-dom';
-import API_URL from '../../apiConfig';
+// import API_URL from '../../apiConfig';
 
 
 
@@ -12,13 +12,13 @@ const Home = () => {
   const [articles, setArticles] = useState([]);
 
   const getHomeIndex = async () => {
+    const url = "https://api.nytimes.com/svc/topstories/v2/technology.json?api-key=nNQV9laA8lCZTvij9Mv9GCc7cD7sQqvC"
     try {
-      const response = await fetch('http://newsapi.org/v2/top-headlines?page=20category=technology&country=usapiKey=a4c0f6406eb744eeb7e00beb7feb9d54/');
+      const response = await fetch(url);
       const data = await response.json();
-      console.log(data);
-      setHome(data.articles);
-    } catch (error) {
-      console.log(error);
+      setHome(data.results)
+    } catch (err) {
+      console.log(err);
     };
   };
 
@@ -44,13 +44,15 @@ const Home = () => {
                   <Card className='articles'>
                     <Card.Body>
                       <Card.Title className='text'>
-                        {home.author}
+                        {home.title}
                       </Card.Title>
-                      <Card.Text>{home.title}</Card.Text>
+                      <Card.Text>{home.byline}</Card.Text>
+                      <Card.Text>{home.abstract}</Card.Text>
                       <Card.Img variant="top" 
-                      rounded
+                      rounded 
                       fluid
-                      src={home.urlToImage} alt="Card image" className="card-image"/>
+                      src={home.multimedia.url} alt="Card image" className="card-image"/>
+                      <Card.Text>{home.published_date}</Card.Text>
                       
                     </Card.Body>
 
