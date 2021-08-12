@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { Container, Image, Row, Col, CardGroup, Button } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
 import { Link, Route } from 'react-router-dom';
-// import API_URL from '../../apiConfig';
+import API_URL from '../../apiConfig';
 
 
 
@@ -12,13 +12,13 @@ const Home = () => {
   const [articles, setArticles] = useState([]);
 
   const getHomeIndex = async () => {
-    const url = "https://newsapi.org/v2/top-headlines?page=20category=technology&country=us&apiKey=a4c0f6406eb744eeb7e00beb7feb9d54"
     try {
-      const response = await fetch(url);
+      const response = await fetch('http://newsapi.org/v2/top-headlines?page=20category=technology&country=usapiKey=a4c0f6406eb744eeb7e00beb7feb9d54/');
       const data = await response.json();
-      setHome(data.articles)
-    } catch (err) {
-      console.log(err);
+      console.log(data);
+      setHome(data.articles);
+    } catch (error) {
+      console.log(error);
     };
   };
 
